@@ -43,8 +43,7 @@ def generate_rows(entries, f_out, start_x, start_y):
 				record_row(result, f_out)
 			else:
 				req_x, follow, precede = result
-				prediction = (req_x, round(predict_y(req_x, precede, follow), 4))
-				print(prediction)
+				prediction = (round(req_x, 4), round(predict_y(req_x, precede, follow), 4))
 				record_row(prediction, f_out)
 		
 
@@ -63,7 +62,7 @@ def run(fname):
 
 for fname in ['S0 WOF', 'S1 WF', 'S1 WOF', 'S2 WF', 'S2 WOF', 'TL WF', 'TL WOF', 'DS WOF']:
 	run(fname)
-	
+
 x = predict_y(449.41399999998583, (449.03, -0.001), (449.442, -0.001))
 print(round(x,4))
 print(predict_y(0, (-4,0), (2,12)))

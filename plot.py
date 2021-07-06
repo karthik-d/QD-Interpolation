@@ -14,11 +14,17 @@ def get_xy_data(filename):
 	return x_data, y_data
 
 def line_plot(axis, xy_data):
-	axis.plot(xy_data[0], xy_data[1])
+	axis.scatter(xy_data[0], xy_data[1])
 
+"""
 files = ['S1 WF', 'S1 WOF', 'S2 WF', 'S2 WOF', 'TL WF', 'TL WOF']
 for idx, filename in enumerate(files):
 	line_plot(plot.subplot(2, 3, idx+1), get_xy_data(filename))
+plot.show()
+"""
+
+line_plot(plot, get_xy_data('TL WF'))
+line_plot(plot, get_xy_data('TL WF_gen'))
 plot.show()
 
 # print(x_data[:50])
