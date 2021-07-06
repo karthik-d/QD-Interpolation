@@ -15,7 +15,7 @@ def generate_x(entries, start_x, start_y):
 	for row in entires:
 		req_x = curr_x + INTERVAL
 		pt = tuple(map(float, row[0].split()))
-		
+		pass
 
 def run():
 	fname = "S0 WOF"
